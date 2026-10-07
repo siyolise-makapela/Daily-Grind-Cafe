@@ -1,0 +1,244 @@
+* ==========================================================================
+   CAFE AESTHETIC STYLESHEET
+   ========================================================================== */
+
+
+
+/* --- Root Variables for Theme Colors --- */
+:root {
+    --primary-cream: #FDFBF7;   /* Soft, clean backdrop color */
+    --warm-taupe: #F4EFE6;      /* Accent backgrounds / card panels */
+    --coffee-dark: #2C1E1A;     /* Rich deep brown for text and headers */
+    --accent-terracotta: #B67352; /* Warm accent for links, hover effects, & buttons */
+    --text-muted: #655651;      /* Secondary text color */
+    --transition-smooth: all 0.3s ease;
+}
+
+/* --- Global Reset & Base Styling --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--primary-cream);
+    color: var(--coffee-dark);
+    line-height: 1.6;
+    padding-bottom: 60px;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* --- Global Container --- */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* --- Navigation Bar Layout --- */
+nav {
+    background-color: var(--primary-cream);
+    border-bottom: 1px solid var(--warm-taupe);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 15px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+nav a {
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--coffee-dark);
+    padding: 8px 4px;
+    position: relative;
+    transition: var(--transition-smooth);
+}
+
+/* Interactive underline hover animation */
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--accent-terracotta);
+    transition: var(--transition-smooth);
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+nav a:hover {
+    color: var(--accent-terracotta);
+}
+
+/* --- Page Header Layout --- */
+.page-header {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: var(--warm-taupe);
+    margin-bottom: 40px;
+}
+
+.page-header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.page-header p {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: var(--accent-terracotta);
+    font-size: 1.2rem;
+}
+
+/* --- Cards & Grid Containers (For Menus & Assets) --- */
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.card {
+    background: #ffffff;
+    border: 1px solid var(--warm-taupe);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(44, 30, 26, 0.02);
+    transition: var(--transition-smooth);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(44, 30, 26, 0.06);
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+}
+
+.card-content p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* --- Interactive Forms Style (Enquiry & Contact) --- */
+form {
+    max-width: 600px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    border: 1px solid var(--warm-taupe);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+form input, form textarea, form select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--warm-taupe);
+    background-color: var(--primary-cream);
+    border-radius: 4px;
+    font-family: inherit;
+    color: var(--coffee-dark);
+    outline: none;
+    transition: var(--transition-smooth);
+}
+
+form input:focus, form textarea:focus, form select:focus {
+    border-color: var(--accent-terracotta);
+    background-color: #ffffff;
+}
+
+/* Cozy CTA Buttons */
+.btn-submit {
+    display: inline-block;
+    background-color: var(--coffee-dark);
+    color: var(--primary-cream);
+    padding: 14px 28px;
+    border: none;
+    border-radius: 4px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    width: 100%;
+}
+
+.btn-submit:hover {
+    background-color: var(--accent-terracotta);
+}
+
+/* --- Footer Area --- */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--warm-taupe);
+    margin-top: 60px;
+}
+
+/* --- Mobile Responsiveness Adjustments --- */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    .page-header h1 {
+        font-size: 2.2rem;
+    }
+    form {
+        padding: 20px;
+    }
+}

@@ -1,0 +1,92 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | The Daily Grind Café</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center; width: 90%;">
+            <strong style="font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--coffee-dark);">The Daily Grind Café</strong>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="enquiry.html">Enquiries</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Warm Aesthetic Header Panel -->
+    <header class="page-header">
+        <h1>Get In Touch</h1>
+        <p>Have questions, feedback, or just want to talk coffee? We'd love to hear from you.</p>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 40px; align-items: start;">
+        
+        <!-- Message Intake Form Box -->
+        <section class="card-content" style="background: #ffffff; padding: 30px; border-radius: 8px; border: 1px solid var(--warm-taupe);">
+            <h2 style="margin-bottom: 20px; font-family: 'Playfair Display', serif; color: var(--coffee-dark);">Send a Message</h2>
+            <form action="#" method="POST" style="margin: 0; padding: 0; border: none; max-width: 100%;">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" required placeholder="Enter full name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" required placeholder="name@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="msg">Message</label>
+                    <textarea id="msg" rows="5" required placeholder="Type your message here..."></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Send Message</button>
+            </form>
+        </section>
+
+        <!-- Business Details & Map Info Box -->
+        <section class="card-content" style="background: #ffffff; padding: 30px; border-radius: 8px; border: 1px solid var(--warm-taupe);">
+            <h2 style="margin-bottom: 20px; font-family: 'Playfair Display', serif; color: var(--coffee-dark);">Our Details</h2>
+            
+            <div style="margin-bottom: 25px;">
+                <p style="margin-bottom: 8px;">
+                    <strong style="color: var(--accent-terracotta); text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.5px; display: block;">Physical Address</strong>
+                    14th Avenue Walmer, Gqeberha, South Africa
+                </p>
+                <p style="margin-bottom: 8px;">
+                    <strong style="color: var(--accent-terracotta); text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.5px; display: block;">Phone Number</strong>
+                    +27 (0) 41 555 1234
+                </p>
+                <p style="margin-bottom: 20px;">
+                    <strong style="color: var(--accent-terracotta); text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.5px; display: block;">Email Address</strong>
+                    hello@thedailygrindcafe.com
+                </p>
+            </div>
+
+            <!-- Responsive Map Wrapper -->
+            <div style="position: relative; width: 100%; height: 0; padding-bottom: 60%; overflow: hidden; border-radius: 6px; border: 1px solid var(--warm-taupe);">
+                <iframe src="https://google.com" 
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" 
+                        allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin">
+                </iframe>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Area -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 The Daily Grind Café. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

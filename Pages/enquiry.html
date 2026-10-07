@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event & Catering Enquiries | The Daily Grind Café</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center; width: 90%;">
+            <strong style="font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--coffee-dark);">The Daily Grind Café</strong>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="enquiry.html">Enquiries</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Warm Aesthetic Header Panel -->
+    <header class="page-header">
+        <h1>Event & Catering Enquiry</h1>
+        <p>Want to book our space for a meetup or order fresh catering? Let us know below.</p>
+    </header>
+
+    <!-- Main Form Container -->
+    <main class="container">
+        <!-- Styled Cozy Intake Form Layout -->
+        <form action="#" method="POST" style="box-shadow: 0 4px 20px rgba(44, 30, 26, 0.05); margin: 20px auto 40px auto;">
+            
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" required placeholder="Enter your full name">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" required placeholder="name@example.com">
+            </div>
+
+            <div class="form-group">
+                <label for="enquiry-type">What are you enquiring about?</label>
+                <select id="enquiry-type">
+                    <option value="catering">Event Catering</option>
+                    <option value="venue">Café Venue Hire</option>
+                    <option value="bulk">Bulk Pastry Orders</option>
+                    <option value="other">General Business Inquiry</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="details">Provide More Details</label>
+                <textarea id="details" rows="6" required placeholder="Please include expected dates, times, and number of guests..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">Submit My Enquiry</button>
+        </form>
+    </main>
+
+    <!-- Footer Area -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 The Daily Grind Café. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
